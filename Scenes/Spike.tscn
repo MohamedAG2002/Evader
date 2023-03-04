@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfi5f0egdyanx"]
+
+[ext_resource type="Texture2D" uid="uid://6yu8t5n6rmfx" path="res://Assets/Sprites/spike.png" id="1_1rkfq"]
+[ext_resource type="Script" path="res://Scripts/Trap.gd" id="1_pqncg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2q7h7"]
+height = 32.0
+
+[node name="Spike" type="RigidBody2D" groups=["Trap"]]
+gravity_scale = 0.0
+script = ExtResource("1_pqncg")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1rkfq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_2q7h7")

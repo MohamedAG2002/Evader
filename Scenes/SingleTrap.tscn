@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgqtlxi70vyey"]
+
+[ext_resource type="Script" path="res://Scripts/Trap.gd" id="1_1if73"]
+[ext_resource type="Texture2D" uid="uid://clxvgorxrsf1f" path="res://Assets/Sprites/single_trap.png" id="2_yat4g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1uui2"]
+size = Vector2(16, 32)
+
+[node name="SingleTrap" type="RigidBody2D" groups=["Trap"]]
+gravity_scale = 0.0
+script = ExtResource("1_1if73")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_yat4g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1uui2")
